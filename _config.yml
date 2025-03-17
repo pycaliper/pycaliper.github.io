@@ -1,0 +1,6 @@
+title: PyCaliper
+description: A robust solution for hardware verification automation.
+baseurl: ""         # the subpath of your site, e.g. /hardware-verification-tool
+url: "https://pycaliper.github.io"   # your GitHub Pages URL
+plugins:
+  - jemoji

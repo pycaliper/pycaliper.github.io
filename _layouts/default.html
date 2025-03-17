@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-container">
+        <div class="sidebar">
+          <div class="sidebar-header">
+            <!-- Optional logo: uncomment the line below and replace "logo.png" with your logo path -->
+            <h2>{{ site.title }}</h2>
+            <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Logo" class="logo">
+          </div>
+          <ul class="sidebar-links">
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/docs/' | relative_url }}">Documentation</a></li>
+            <li><a href="{{ '/examples/' | relative_url }}">Examples</a></li>
+            <li><a href="{{ '/contribute/' | relative_url }}">Contributing</a></li>
+            <li><a href="https://github.com/adwait/pycaliper">GitHub</a></li>            
+          </ul>
+        </div>
+        <div class="content">
+          {{ content }}
+        </div>
+      </div>
+      <footer>
+        <p>&copy;{{ site.time | date: "%Y" }} {{site.title}}. Released under the BSD-3 Clause License.</p>
+      </footer>
+    </div>
+  </body>
+</html>
