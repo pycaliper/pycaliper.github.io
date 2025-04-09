@@ -1,0 +1,181 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup and Install &mdash; PyCaliper  documentation</title>
+      <link rel="stylesheet" type="text/css" href="static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="static/custom.css?v=a2d98839" />
+
+  
+      <script src="static/jquery.js?v=5d32c60e"></script>
+      <script src="static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="static/documentation_options.js?v=5929fcd5"></script>
+      <script src="static/doctools.js?v=9bcbadda"></script>
+      <script src="static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quickstart Guide" href="quickstart.html" />
+    <link rel="prev" title="Welcome to PyCaliper documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PyCaliper
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setup and Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jasper_setup.html">Jasper Configuration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verification_engines.html">Verification Engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">pycaliper Modules</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PyCaliper</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Setup and Install</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="sources/setup_guide.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setup-and-install">
+<h1>Setup and Install<a class="headerlink" href="#setup-and-install" title="Link to this heading"></a></h1>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>Before you begin, ensure you have the following installed on your system:</p>
+<ul class="simple">
+<li><p><strong>Git</strong>: To clone the repository.</p></li>
+<li><p><strong>Python</strong>: Ensure you have Python 3.11 or later and <code class="docutils literal notranslate"><span class="pre">pip</span></code> installed.</p></li>
+</ul>
+</section>
+<section id="step-1-clone-the-repositories">
+<h2>Step 1: Clone the Repositories<a class="headerlink" href="#step-1-clone-the-repositories" title="Link to this heading"></a></h2>
+<p>First, clone the PyCaliper and btor2ex repositories from GitHub. Open your terminal and run the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/adwait/pycaliper.git
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/adwait/btor2ex.git
+</pre></div>
+</div>
+<p>Now either perform a quick setup (Step 2a) or build the package (Step 2b).</p>
+</section>
+<section id="step-2a-quick-no-build-add-to-pythonpath">
+<h2>Step 2a (quick, no build): Add to <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code><a class="headerlink" href="#step-2a-quick-no-build-add-to-pythonpath" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Create a virtual environment (e.g., using <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>), and install dependencies using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</li>
+<li><p>To ensure that the <code class="docutils literal notranslate"><span class="pre">pycaliper</span></code> and <code class="docutils literal notranslate"><span class="pre">btor2ex</span></code> modules are accessible, add their paths to the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> environment variable. You can do this by running the following commands in your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:<span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/pycaliper
+<span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:<span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/btor2ex
+</pre></div>
+</div>
+</li>
+<li><p>(optional) Run tests to verify the setup:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>pycaliper
+python3<span class="w"> </span>-m<span class="w"> </span>tests.test
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="step-2b-build-build-and-install-the-packages">
+<h2>Step 2b (build): Build and Install the Packages<a class="headerlink" href="#step-2b-build-build-and-install-the-packages" title="Link to this heading"></a></h2>
+<p>Set up the virtual environment as before. Now install the projects using <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>. For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;path<span class="w"> </span>to<span class="w"> </span>pycaliper&gt;
+pip<span class="w"> </span>install<span class="w"> </span>.
+<span class="nb">cd</span><span class="w"> </span>&lt;path<span class="w"> </span>to<span class="w"> </span>btor2ex&gt;
+pip<span class="w"> </span>install<span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+<section id="step-3-verify-the-installation">
+<h2>Step 3: Verify the Installation<a class="headerlink" href="#step-3-verify-the-installation" title="Link to this heading"></a></h2>
+<p>To verify that the installation was successful, run the test suite using <code class="docutils literal notranslate"><span class="pre">unittest</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>tests/test.py
+</pre></div>
+</div>
+<p>This will run all tests that do not depend on the Jasper FV app.</p>
+<p>(<em>optional</em>) If you have access to Jasper FV, you can also run the Jasper tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start Jasper FV App by running:</span>
+&lt;path_to_jg&gt;<span class="w"> </span>jasperserver.tcl
+<span class="c1"># INSIDE the Jasper FV App, create a server connection on port 8080</span>
+<span class="c1"># jg&gt; jg_start_server 8080</span>
+
+<span class="c1"># Now run the tests with Jasper FV enabled</span>
+<span class="nv">ENABLE_JG_TESTS</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>python<span class="w"> </span>tests/test.py
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to PyCaliper documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="quickstart.html" class="btn btn-neutral float-right" title="Quickstart Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-25, Intel Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 title: PyCaliper
-description: A robust solution for hardware verification automation.
+description: Python-embedded RTL Verification and Specification Synthesis Infrastructure
 baseurl: ""         # the subpath of your site, e.g. /hardware-verification-tool
 url: "https://pycaliper.github.io"   # your GitHub Pages URL
 plugins:

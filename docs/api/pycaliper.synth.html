@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pycaliper.synth package &mdash; PyCaliper  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../static/custom.css?v=a2d98839" />
+
+  
+      <script src="../static/jquery.js?v=5d32c60e"></script>
+      <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../static/doctools.js?v=9bcbadda"></script>
+      <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pycaliper.verif package" href="pycaliper.verif.html" />
+    <link rel="prev" title="pycaliper.per package" href="pycaliper.per.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PyCaliper
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../setup_guide.html">Setup and Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jasper_setup.html">Jasper Configuration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../verification_engines.html">Verification Engines</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pycaliper Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pycaliper.html">pycaliper package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.btorinterface.html">pycaliper.btorinterface package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.frontend.html">pycaliper.frontend package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.jginterface.html">pycaliper.jginterface package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.per.html">pycaliper.per package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pycaliper.synth package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.verif.html">pycaliper.verif package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyCaliper</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">pycaliper Modules</a></li>
+          <li class="breadcrumb-item"><a href="pycaliper.html">pycaliper package</a></li>
+      <li class="breadcrumb-item active">pycaliper.synth package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../sources/api/pycaliper.synth.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pycaliper-synth-package">
+<h1>pycaliper.synth package<a class="headerlink" href="#pycaliper-synth-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pycaliper.synth.alignsynthesis">
+<span id="pycaliper-synth-alignsynthesis-module"></span><h2>pycaliper.synth.alignsynthesis module<a class="headerlink" href="#module-pycaliper.synth.alignsynthesis" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.alignsynthesis.AlignSynthesizer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.alignsynthesis.</span></span><span class="sig-name descname"><span class="pre">AlignSynthesizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tmgr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.alignsynthesis.AlignSynthesizer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.alignsynthesis.AlignSynthesizer.synthesize">
+<span class="sig-name descname"><span class="pre">synthesize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specmodule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.alignsynthesis.AlignSynthesizer.synthesize" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="pycaliper.per.html#pycaliper.per.per.SpecModule" title="pycaliper.per.per.SpecModule"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpecModule</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pycaliper.synth.btorsynthesizer">
+<span id="pycaliper-synth-btorsynthesizer-module"></span><h2>pycaliper.synth.btorsynthesizer module<a class="headerlink" href="#module-pycaliper.synth.btorsynthesizer" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.btorsynthesizer.</span></span><span class="sig-name descname"><span class="pre">BTORVerifier2TraceIncremental</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gui</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pycaliper.btorinterface.html#pycaliper.btorinterface.pycbtorinterface.PYCBTORInterface" title="pycaliper.btorinterface.pycbtorinterface.PYCBTORInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">PYCBTORInterface</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental.can_add">
+<span class="sig-name descname"><span class="pre">can_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hole_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental.can_add" title="Link to this definition"></a></dt>
+<dd><p>Check if the hole can be added</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental.disable_hole_assm">
+<span class="sig-name descname"><span class="pre">disable_hole_assm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hole_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental.disable_hole_assm" title="Link to this definition"></a></dt>
+<dd><p>Disable a hole by removing its assumptions and assertions</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental.enable_hole_assm">
+<span class="sig-name descname"><span class="pre">enable_hole_assm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hole_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental.enable_hole_assm" title="Link to this definition"></a></dt>
+<dd><p>Enable a hole by adding its assumptions and assertions</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental.unroll">
+<span class="sig-name descname"><span class="pre">unroll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specmodule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">des</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental.unroll" title="Link to this definition"></a></dt>
+<dd><p>Synthesizer for inductive two-safety property</p>
+<dl class="simple">
+<dt>Perform hole-synthesis for a single module w.r.t. the following property:</dt><dd><p>input_eq &amp;&amp; state_eq <a href="#id1"><span class="problematic" id="id2">|</span></a>-&gt; ##1 output_eq &amp;&amp; state_eq</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>synthesis result</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental.verify">
+<span class="sig-name descname"><span class="pre">verify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.btorsynthesizer.BTORVerifier2TraceIncremental.verify" title="Link to this definition"></a></dt>
+<dd><p>Check if the program is safe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="pycaliper.btorinterface.html#pycaliper.btorinterface.pycbtorinterface.BTORVerifResult" title="pycaliper.btorinterface.pycbtorinterface.BTORVerifResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">BTORVerifResult</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pycaliper.synth.iis_strategy">
+<span id="pycaliper-synth-iis-strategy-module"></span><h2>pycaliper.synth.iis_strategy module<a class="headerlink" href="#module-pycaliper.synth.iis_strategy" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.IISStrategy">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.iis_strategy.</span></span><span class="sig-name descname"><span class="pre">IISStrategy</span></span><a class="headerlink" href="#pycaliper.synth.iis_strategy.IISStrategy" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.IISStrategy.get_candidate_order">
+<span class="sig-name descname"><span class="pre">get_candidate_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unexplored</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.IISStrategy.get_candidate_order" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.IISStrategy.get_next_candidate">
+<span class="sig-name descname"><span class="pre">get_next_candidate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unexplored</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.IISStrategy.get_next_candidate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.IISStrategy.get_stats">
+<span class="sig-name descname"><span class="pre">get_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.IISStrategy.get_stats" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.LLMStrategy">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.iis_strategy.</span></span><span class="sig-name descname"><span class="pre">LLMStrategy</span></span><a class="headerlink" href="#pycaliper.synth.iis_strategy.LLMStrategy" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.synth.iis_strategy.IISStrategy" title="pycaliper.synth.iis_strategy.IISStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">IISStrategy</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.LLMStrategy.get_candidate_order">
+<span class="sig-name descname"><span class="pre">get_candidate_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unexplored</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prev_attempts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.LLMStrategy.get_candidate_order" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.LLMStrategy.get_next_candidate">
+<span class="sig-name descname"><span class="pre">get_next_candidate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unexplored</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.LLMStrategy.get_next_candidate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.LLMStrategy.get_stats">
+<span class="sig-name descname"><span class="pre">get_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.LLMStrategy.get_stats" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.RandomStrategy">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.iis_strategy.</span></span><span class="sig-name descname"><span class="pre">RandomStrategy</span></span><a class="headerlink" href="#pycaliper.synth.iis_strategy.RandomStrategy" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.synth.iis_strategy.IISStrategy" title="pycaliper.synth.iis_strategy.IISStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">IISStrategy</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.RandomStrategy.get_candidate_order">
+<span class="sig-name descname"><span class="pre">get_candidate_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unexplored</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.RandomStrategy.get_candidate_order" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.RandomStrategy.get_next_candidate">
+<span class="sig-name descname"><span class="pre">get_next_candidate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unexplored</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.RandomStrategy.get_next_candidate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.RandomStrategy.get_stats">
+<span class="sig-name descname"><span class="pre">get_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.RandomStrategy.get_stats" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.SeqStrategy">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.iis_strategy.</span></span><span class="sig-name descname"><span class="pre">SeqStrategy</span></span><a class="headerlink" href="#pycaliper.synth.iis_strategy.SeqStrategy" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.synth.iis_strategy.IISStrategy" title="pycaliper.synth.iis_strategy.IISStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">IISStrategy</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.SeqStrategy.get_candidate_order">
+<span class="sig-name descname"><span class="pre">get_candidate_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unexplored</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.SeqStrategy.get_candidate_order" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.SeqStrategy.get_next_candidate">
+<span class="sig-name descname"><span class="pre">get_next_candidate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unexplored</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.SeqStrategy.get_next_candidate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.SeqStrategy.get_stats">
+<span class="sig-name descname"><span class="pre">get_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.SeqStrategy.get_stats" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.extract_markdown">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.synth.iis_strategy.</span></span><span class="sig-name descname"><span class="pre">extract_markdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.extract_markdown" title="Link to this definition"></a></dt>
+<dd><p>Extracts the markdown from the test content</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.synth.iis_strategy.get_client">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.synth.iis_strategy.</span></span><span class="sig-name descname"><span class="pre">get_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.iis_strategy.get_client" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pycaliper.synth.persynthesis">
+<span id="pycaliper-synth-persynthesis-module"></span><h2>pycaliper.synth.persynthesis module<a class="headerlink" href="#module-pycaliper.synth.persynthesis" title="Link to this heading"></a></h2>
+<p>Synthesis for equality invariants using Jasper FV Interface</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.persynthesis.</span></span><span class="sig-name descname"><span class="pre">HoudiniSynthesizer</span></span><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizer.synthesize">
+<span class="sig-name descname"><span class="pre">synthesize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topmod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">des</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy=&lt;pycaliper.synth.iis_strategy.SeqStrategy</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">synconfig=HoudiniSynthesizerConfig(fuelbudget=10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepbudget=10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retries=1)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizer.synthesize" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<a class="reference internal" href="pycaliper.per.html#pycaliper.per.per.SpecModule" title="pycaliper.per.per.SpecModule"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpecModule</span></code></a>, <a class="reference internal" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerStats" title="pycaliper.synth.persynthesis.HoudiniSynthesizerStats"><code class="xref py py-class docutils literal notranslate"><span class="pre">HoudiniSynthesizerStats</span></code></a>]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerBTOR">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.persynthesis.</span></span><span class="sig-name descname"><span class="pre">HoudiniSynthesizerBTOR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gui</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerBTOR" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.synth.persynthesis.HoudiniSynthesizer" title="pycaliper.synth.persynthesis.HoudiniSynthesizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">HoudiniSynthesizer</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.persynthesis.</span></span><span class="sig-name descname"><span class="pre">HoudiniSynthesizerConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fuelbudget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepbudget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerConfig.fuelbudget">
+<span class="sig-name descname"><span class="pre">fuelbudget</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerConfig.fuelbudget" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerConfig.retries">
+<span class="sig-name descname"><span class="pre">retries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerConfig.retries" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerConfig.stepbudget">
+<span class="sig-name descname"><span class="pre">stepbudget</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerConfig.stepbudget" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerJG">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.persynthesis.</span></span><span class="sig-name descname"><span class="pre">HoudiniSynthesizerJG</span></span><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerJG" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.synth.persynthesis.HoudiniSynthesizer" title="pycaliper.synth.persynthesis.HoudiniSynthesizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">HoudiniSynthesizer</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerStats">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.persynthesis.</span></span><span class="sig-name descname"><span class="pre">HoudiniSynthesizerStats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solvecalls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minfuel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerStats" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerStats.minfuel">
+<span class="sig-name descname"><span class="pre">minfuel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerStats.minfuel" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerStats.solvecalls">
+<span class="sig-name descname"><span class="pre">solvecalls</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerStats.solvecalls" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerStats.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerStats.steps" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.HoudiniSynthesizerStats.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></em><a class="headerlink" href="#pycaliper.synth.persynthesis.HoudiniSynthesizerStats.success" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.PERSynthesizer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.persynthesis.</span></span><span class="sig-name descname"><span class="pre">PERSynthesizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pyconfig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy=&lt;pycaliper.synth.iis_strategy.SeqStrategy</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fuelbudget=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepbudget=10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.PERSynthesizer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.PERSynthesizer.reset_state">
+<span class="sig-name descname"><span class="pre">reset_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.PERSynthesizer.reset_state" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.PERSynthesizer.safe">
+<span class="sig-name descname"><span class="pre">safe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.PERSynthesizer.safe" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.PERSynthesizer.synthesize">
+<span class="sig-name descname"><span class="pre">synthesize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topmod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.PERSynthesizer.synthesize" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="pycaliper.per.html#pycaliper.per.per.SpecModule" title="pycaliper.per.per.SpecModule"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpecModule</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.SynthesisTree">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.persynthesis.</span></span><span class="sig-name descname"><span class="pre">SynthesisTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asrts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inherits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.SynthesisTree" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.SynthesisTree.add_asrt">
+<span class="sig-name descname"><span class="pre">add_asrt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asrt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.SynthesisTree.add_asrt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.SynthesisTree.add_child">
+<span class="sig-name descname"><span class="pre">add_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cand</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.SynthesisTree.add_child" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.SynthesisTree.add_secondary_assm">
+<span class="sig-name descname"><span class="pre">add_secondary_assm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.SynthesisTree.add_secondary_assm" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.SynthesisTree.counter">
+<span class="sig-name descname"><span class="pre">counter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pycaliper.synth.persynthesis.SynthesisTree.counter" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.persynthesis.SynthesisTree.is_self_inductive">
+<span class="sig-name descname"><span class="pre">is_self_inductive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.persynthesis.SynthesisTree.is_self_inductive" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pycaliper.synth.synthprog">
+<span id="pycaliper-synth-synthprog-module"></span><h2>pycaliper.synth.synthprog module<a class="headerlink" href="#module-pycaliper.synth.synthprog" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.synthprog.LUTSynthProgram">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.synthprog.</span></span><span class="sig-name descname"><span class="pre">LUTSynthProgram</span></span><a class="headerlink" href="#pycaliper.synth.synthprog.LUTSynthProgram" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.synthprog.LUTSynthProgram.add_values">
+<span class="sig-name descname"><span class="pre">add_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.synthprog.LUTSynthProgram.add_values" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.synthprog.LUTSynthProgram.get_inv">
+<span class="sig-name descname"><span class="pre">get_inv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.synthprog.LUTSynthProgram.get_inv" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.synthprog.LUTSynthProgram.solve">
+<span class="sig-name descname"><span class="pre">solve</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.synthprog.LUTSynthProgram.solve" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.synth.synthprog.ZDDLUTSynthProgram">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.synth.synthprog.</span></span><span class="sig-name descname"><span class="pre">ZDDLUTSynthProgram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.synthprog.ZDDLUTSynthProgram" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.synth.synthprog.ZDDLUTSynthProgram.MAX_DEPTH">
+<span class="sig-name descname"><span class="pre">MAX_DEPTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#pycaliper.synth.synthprog.ZDDLUTSynthProgram.MAX_DEPTH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.synthprog.ZDDLUTSynthProgram.add_entries">
+<span class="sig-name descname"><span class="pre">add_entries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctr_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_vals</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.synthprog.ZDDLUTSynthProgram.add_entries" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.synthprog.ZDDLUTSynthProgram.get_cons">
+<span class="sig-name descname"><span class="pre">get_cons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.synthprog.ZDDLUTSynthProgram.get_cons" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.synthprog.ZDDLUTSynthProgram.get_inv">
+<span class="sig-name descname"><span class="pre">get_inv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.synthprog.ZDDLUTSynthProgram.get_inv" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.synth.synthprog.ZDDLUTSynthProgram.solve">
+<span class="sig-name descname"><span class="pre">solve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.synth.synthprog.ZDDLUTSynthProgram.solve" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pycaliper.synth">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pycaliper.synth" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pycaliper.per.html" class="btn btn-neutral float-left" title="pycaliper.per package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pycaliper.verif.html" class="btn btn-neutral float-right" title="pycaliper.verif package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-25, Intel Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
