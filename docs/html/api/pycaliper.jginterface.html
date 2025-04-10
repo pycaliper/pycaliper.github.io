@@ -1,0 +1,436 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pycaliper.jginterface package &mdash; PyCaliper  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../static/custom.css?v=a2d98839" />
+
+  
+      <script src="../static/jquery.js?v=5d32c60e"></script>
+      <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../static/doctools.js?v=9bcbadda"></script>
+      <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pycaliper.per package" href="pycaliper.per.html" />
+    <link rel="prev" title="pycaliper.frontend package" href="pycaliper.frontend.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PyCaliper
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../setup_guide.html">Setup and Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jasper_setup.html">Jasper Configuration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../verification_engines.html">Verification Engines</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pycaliper Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pycaliper.html">pycaliper package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.btorinterface.html">pycaliper.btorinterface package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.frontend.html">pycaliper.frontend package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pycaliper.jginterface package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.per.html">pycaliper.per package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.synth.html">pycaliper.synth package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.verif.html">pycaliper.verif package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyCaliper</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">pycaliper Modules</a></li>
+          <li class="breadcrumb-item"><a href="pycaliper.html">pycaliper package</a></li>
+      <li class="breadcrumb-item active">pycaliper.jginterface package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../sources/api/pycaliper.jginterface.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pycaliper-jginterface-package">
+<h1>pycaliper.jginterface package<a class="headerlink" href="#pycaliper-jginterface-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pycaliper.jginterface.jasperclient">
+<span id="pycaliper-jginterface-jasperclient-module"></span><h2>pycaliper.jginterface.jasperclient module<a class="headerlink" href="#module-pycaliper.jginterface.jasperclient" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.ClientMode">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jasperclient.</span></span><span class="sig-name descname"><span class="pre">ClientMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jasperclient.ClientMode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.ClientMode.ONLINE">
+<span class="sig-name descname"><span class="pre">ONLINE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pycaliper.jginterface.jasperclient.ClientMode.ONLINE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.ClientMode.SIM">
+<span class="sig-name descname"><span class="pre">SIM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pycaliper.jginterface.jasperclient.ClientMode.SIM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.JasperError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jasperclient.</span></span><span class="sig-name descname"><span class="pre">JasperError</span></span><a class="headerlink" href="#pycaliper.jginterface.jasperclient.JasperError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.SocketError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jasperclient.</span></span><span class="sig-name descname"><span class="pre">SocketError</span></span><a class="headerlink" href="#pycaliper.jginterface.jasperclient.SocketError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.close_tcp">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jasperclient.</span></span><span class="sig-name descname"><span class="pre">close_tcp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jasperclient.close_tcp" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.connect_tcp">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jasperclient.</span></span><span class="sig-name descname"><span class="pre">connect_tcp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8080</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jasperclient.connect_tcp" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.eval">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jasperclient.</span></span><span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jasperclient.eval" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.is_online">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jasperclient.</span></span><span class="sig-name descname"><span class="pre">is_online</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jasperclient.is_online" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.main">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jasperclient.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jasperclient.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jasperclient.shutdown_tcp">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jasperclient.</span></span><span class="sig-name descname"><span class="pre">shutdown_tcp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jasperclient.shutdown_tcp" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pycaliper.jginterface.jgdesign">
+<span id="pycaliper-jginterface-jgdesign-module"></span><h2>pycaliper.jginterface.jgdesign module<a class="headerlink" href="#module-pycaliper.jginterface.jgdesign" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgdesign.JGDesign">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgdesign.</span></span><span class="sig-name descname"><span class="pre">JGDesign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pyc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgdesign.JGDesign" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pycaliper.html#pycaliper.pycconfig.Design" title="pycaliper.pycconfig.Design"><code class="xref py py-class docutils literal notranslate"><span class="pre">Design</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-pycaliper.jginterface.jgoracle">
+<span id="pycaliper-jginterface-jgoracle-module"></span><h2>pycaliper.jginterface.jgoracle module<a class="headerlink" href="#module-pycaliper.jginterface.jgoracle" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.ProofResult">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">ProofResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.ProofResult" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.ProofResult.CEX">
+<span class="sig-name descname"><span class="pre">CEX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pycaliper.jginterface.jgoracle.ProofResult.CEX" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.ProofResult.MAX_TRACE_LENGTH">
+<span class="sig-name descname"><span class="pre">MAX_TRACE_LENGTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pycaliper.jginterface.jgoracle.ProofResult.MAX_TRACE_LENGTH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.ProofResult.NONE">
+<span class="sig-name descname"><span class="pre">NONE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pycaliper.jginterface.jgoracle.ProofResult.NONE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.ProofResult.PROVEN">
+<span class="sig-name descname"><span class="pre">PROVEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pycaliper.jginterface.jgoracle.ProofResult.PROVEN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.ProofResult.SAFE">
+<span class="sig-name descname"><span class="pre">SAFE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#pycaliper.jginterface.jgoracle.ProofResult.SAFE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.ProofResult.SIM">
+<span class="sig-name descname"><span class="pre">SIM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#pycaliper.jginterface.jgoracle.ProofResult.SIM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.ProofResult.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#pycaliper.jginterface.jgoracle.ProofResult.UNKNOWN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.create_vcd_trace">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">create_vcd_trace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.create_vcd_trace" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.disable_all_bmc">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">disable_all_bmc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">svacon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.disable_all_bmc" title="Link to this definition"></a></dt>
+<dd><p>Disable all BMC assumptions</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.disable_assm">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">disable_assm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.disable_assm" title="Link to this definition"></a></dt>
+<dd><p>Disable an assumption</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>taskcon</strong> (<em>str</em>) – proof node name</p></li>
+<li><p><strong>assm</strong> (<em>str</em>) – assumption name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result of the JasperGold command</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.enable_assm">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">enable_assm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.enable_assm" title="Link to this definition"></a></dt>
+<dd><p>Enable an assumption</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>taskcon</strong> (<em>str</em>) – proof node name</p></li>
+<li><p><strong>assm</strong> (<em>str</em>) – assumption name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result of the JasperGold command</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.get_wctx">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">get_wctx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.get_wctx" title="Link to this definition"></a></dt>
+<dd><p>Get the hierarchical assumption name for a property wire</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>taskcon</strong> (<em>str</em>) – proof node name under which the property is defined</p></li>
+<li><p><strong>prop</strong> (<em>str</em>) – property name</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>hierarchical assumption name</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.is_pass">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">is_pass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.is_pass" title="Link to this definition"></a></dt>
+<dd><p>Is the result a pass</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.loadscript">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">loadscript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.loadscript" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.prove">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">prove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.prove" title="Link to this definition"></a></dt>
+<dd><p>Prove a property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pycaliper.jginterface.jgoracle.ProofResult" title="pycaliper.jginterface.jgoracle.ProofResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProofResult</span></code></a></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>taskcon</strong> (<em>str</em>) – proof node the property is defined under</p></li>
+<li><p><strong>prop</strong> (<em>str</em>) – property name</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result of the proof</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#pycaliper.jginterface.jgoracle.ProofResult" title="pycaliper.jginterface.jgoracle.ProofResult">ProofResult</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.prove_out_bmc">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">prove_out_bmc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">svacon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sched</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.prove_out_bmc" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<a class="reference internal" href="#pycaliper.jginterface.jgoracle.ProofResult" title="pycaliper.jginterface.jgoracle.ProofResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProofResult</span></code></a>]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.prove_out_induction_1t">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">prove_out_induction_1t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.prove_out_induction_1t" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pycaliper.jginterface.jgoracle.ProofResult" title="pycaliper.jginterface.jgoracle.ProofResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProofResult</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.prove_out_induction_2t">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">prove_out_induction_2t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.prove_out_induction_2t" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pycaliper.jginterface.jgoracle.ProofResult" title="pycaliper.jginterface.jgoracle.ProofResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProofResult</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.set_assm_bmc">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">set_assm_bmc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">svacon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sched</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.set_assm_bmc" title="Link to this definition"></a></dt>
+<dd><p>Enable all assumptions required for 1 BMC trace properties</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.set_assm_induction_1t">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">set_assm_induction_1t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">svacon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.set_assm_induction_1t" title="Link to this definition"></a></dt>
+<dd><p>Enable only 1-trace assumptions (required for 1 trace properties)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>taskcon</strong> (<em>str</em>) – proof node name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.set_assm_induction_2t">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">set_assm_induction_2t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">svacon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.set_assm_induction_2t" title="Link to this definition"></a></dt>
+<dd><p>Enable all assumptions required for 2 trace properties</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>taskcon</strong> (<em>str</em>) – proof node name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgoracle.setjwd">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgoracle.</span></span><span class="sig-name descname"><span class="pre">setjwd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jwd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgoracle.setjwd" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pycaliper.jginterface.jgsetup">
+<span id="pycaliper-jginterface-jgsetup-module"></span><h2>pycaliper.jginterface.jgsetup module<a class="headerlink" href="#module-pycaliper.jginterface.jgsetup" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.jginterface.jgsetup.setup_jasper">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.jginterface.jgsetup.</span></span><span class="sig-name descname"><span class="pre">setup_jasper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jgc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.jginterface.jgsetup.setup_jasper" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pycaliper.jginterface">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pycaliper.jginterface" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pycaliper.frontend.html" class="btn btn-neutral float-left" title="pycaliper.frontend package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pycaliper.per.html" class="btn btn-neutral float-right" title="pycaliper.per package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-25, Intel Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

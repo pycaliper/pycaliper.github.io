@@ -1,0 +1,1533 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pycaliper.per package &mdash; PyCaliper  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../static/custom.css?v=a2d98839" />
+
+  
+      <script src="../static/jquery.js?v=5d32c60e"></script>
+      <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../static/doctools.js?v=9bcbadda"></script>
+      <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pycaliper.synth package" href="pycaliper.synth.html" />
+    <link rel="prev" title="pycaliper.jginterface package" href="pycaliper.jginterface.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PyCaliper
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../setup_guide.html">Setup and Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jasper_setup.html">Jasper Configuration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../verification_engines.html">Verification Engines</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pycaliper Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pycaliper.html">pycaliper package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.btorinterface.html">pycaliper.btorinterface package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.frontend.html">pycaliper.frontend package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.jginterface.html">pycaliper.jginterface package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pycaliper.per package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.synth.html">pycaliper.synth package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycaliper.verif.html">pycaliper.verif package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyCaliper</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">pycaliper Modules</a></li>
+          <li class="breadcrumb-item"><a href="pycaliper.html">pycaliper package</a></li>
+      <li class="breadcrumb-item active">pycaliper.per package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../sources/api/pycaliper.per.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pycaliper-per-package">
+<h1>pycaliper.per package<a class="headerlink" href="#pycaliper-per-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pycaliper.per.expr">
+<span id="pycaliper-per-expr-module"></span><h2>pycaliper.per.expr module<a class="headerlink" href="#module-pycaliper.per.expr" title="Link to this heading"></a></h2>
+<p>PyCaliper</p>
+<p>Author: Adwait Godbole, UC Berkeley</p>
+<p>File: per/expr.py</p>
+<p>Expression base class, and Expr operator classes</p>
+<p>This module provides the base class for expression abstract syntax trees (AST) with overloaded operators.
+Supports operations like addition, subtraction, logical operations, etc.</p>
+<p>For licensing information, please refer to the LICENSE file.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Add">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Add</span></span><a class="headerlink" href="#pycaliper.per.expr.Add" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the addition operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.ArithmeticShiftLeft">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">ArithmeticShiftLeft</span></span><a class="headerlink" href="#pycaliper.per.expr.ArithmeticShiftLeft" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the arithmetic shift left operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.ArithmeticShiftRight">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">ArithmeticShiftRight</span></span><a class="headerlink" href="#pycaliper.per.expr.ArithmeticShiftRight" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the arithmetic shift right operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.BinaryAnd">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">BinaryAnd</span></span><a class="headerlink" href="#pycaliper.per.expr.BinaryAnd" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the binary AND operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.BinaryNor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">BinaryNor</span></span><a class="headerlink" href="#pycaliper.per.expr.BinaryNor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the binary NOR operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.BinaryOr">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">BinaryOr</span></span><a class="headerlink" href="#pycaliper.per.expr.BinaryOr" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the binary OR operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.BinaryXnor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">BinaryXnor</span></span><a class="headerlink" href="#pycaliper.per.expr.BinaryXnor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the binary XNOR operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.BinaryXor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">BinaryXor</span></span><a class="headerlink" href="#pycaliper.per.expr.BinaryXor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the binary XOR operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.CaseEquality">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">CaseEquality</span></span><a class="headerlink" href="#pycaliper.per.expr.CaseEquality" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the case equality operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.CaseInequality">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">CaseInequality</span></span><a class="headerlink" href="#pycaliper.per.expr.CaseInequality" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the case inequality operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Concat">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Concat</span></span><a class="headerlink" href="#pycaliper.per.expr.Concat" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the concatenation operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Const">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Const</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.expr.Const" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><code class="xref py py-class docutils literal notranslate"><span class="pre">Expr</span></code></a></p>
+<p>A constant value with an optional width.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> (<em>int</em>) – The constant value.</p></li>
+<li><p><strong>width</strong> (<em>int</em><em>, </em><em>optional</em>) – The width of the constant. Defaults to -1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Const.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.expr.Const.get_sva" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Div">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Div</span></span><a class="headerlink" href="#pycaliper.per.expr.Div" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the division operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Equality">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Equality</span></span><a class="headerlink" href="#pycaliper.per.expr.Equality" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the equality operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Expr">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Expr</span></span><a class="headerlink" href="#pycaliper.per.expr.Expr" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for expression abstract syntax trees (AST) with overloaded operators.
+Supports operations like addition, subtraction, logical operations, etc.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Expr.eand">
+<span class="sig-name descname"><span class="pre">eand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.expr.Expr.eand" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Expr.eneg">
+<span class="sig-name descname"><span class="pre">eneg</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.expr.Expr.eneg" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Expr.eor">
+<span class="sig-name descname"><span class="pre">eor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.expr.Expr.eor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Expr.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.expr.Expr.get_sva" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Extract">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Extract</span></span><a class="headerlink" href="#pycaliper.per.expr.Extract" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the extract operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.GreaterThan">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">GreaterThan</span></span><a class="headerlink" href="#pycaliper.per.expr.GreaterThan" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the greater than operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.GreaterThanEqual">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">GreaterThanEqual</span></span><a class="headerlink" href="#pycaliper.per.expr.GreaterThanEqual" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the greater than or equal operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.ITE">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">ITE</span></span><a class="headerlink" href="#pycaliper.per.expr.ITE" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the if-then-else operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Inequality">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Inequality</span></span><a class="headerlink" href="#pycaliper.per.expr.Inequality" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the inequality operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.LessThan">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">LessThan</span></span><a class="headerlink" href="#pycaliper.per.expr.LessThan" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the less than operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.LessThanEqual">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">LessThanEqual</span></span><a class="headerlink" href="#pycaliper.per.expr.LessThanEqual" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the less than or equal operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.LogicalAnd">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">LogicalAnd</span></span><a class="headerlink" href="#pycaliper.per.expr.LogicalAnd" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the logical AND operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.LogicalEquivalence">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">LogicalEquivalence</span></span><a class="headerlink" href="#pycaliper.per.expr.LogicalEquivalence" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the logical equivalence operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.LogicalImplication">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">LogicalImplication</span></span><a class="headerlink" href="#pycaliper.per.expr.LogicalImplication" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the logical implication operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.LogicalOr">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">LogicalOr</span></span><a class="headerlink" href="#pycaliper.per.expr.LogicalOr" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the logical OR operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.LogicalShiftLeft">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">LogicalShiftLeft</span></span><a class="headerlink" href="#pycaliper.per.expr.LogicalShiftLeft" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the logical shift left operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.LogicalShiftRight">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">LogicalShiftRight</span></span><a class="headerlink" href="#pycaliper.per.expr.LogicalShiftRight" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the logical shift right operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Mod">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Mod</span></span><a class="headerlink" href="#pycaliper.per.expr.Mod" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the modulus operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Mul">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Mul</span></span><a class="headerlink" href="#pycaliper.per.expr.Mul" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the multiplication operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Op">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Op</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opstring</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reprstring</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.expr.Op" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents an operator with a string representation, fixity, and a representation string.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Op.opstring">
+<span class="sig-name descname"><span class="pre">opstring</span></span><a class="headerlink" href="#pycaliper.per.expr.Op.opstring" title="Link to this definition"></a></dt>
+<dd><p>The operator string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Op.fixity">
+<span class="sig-name descname"><span class="pre">fixity</span></span><a class="headerlink" href="#pycaliper.per.expr.Op.fixity" title="Link to this definition"></a></dt>
+<dd><p>The fixity of the operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pycaliper.per.expr.Op.Fixity" title="pycaliper.per.expr.Op.Fixity">Fixity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Op.reprstring">
+<span class="sig-name descname"><span class="pre">reprstring</span></span><a class="headerlink" href="#pycaliper.per.expr.Op.reprstring" title="Link to this definition"></a></dt>
+<dd><p>The string for creating a representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Op.Fixity">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Fixity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.expr.Op.Fixity" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Fixity of the operator; used during SVA compilation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Op.Fixity.CONCAT">
+<span class="sig-name descname"><span class="pre">CONCAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pycaliper.per.expr.Op.Fixity.CONCAT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Op.Fixity.EXTRACT">
+<span class="sig-name descname"><span class="pre">EXTRACT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#pycaliper.per.expr.Op.Fixity.EXTRACT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Op.Fixity.INFIX">
+<span class="sig-name descname"><span class="pre">INFIX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pycaliper.per.expr.Op.Fixity.INFIX" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Op.Fixity.ITE">
+<span class="sig-name descname"><span class="pre">ITE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pycaliper.per.expr.Op.Fixity.ITE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Op.Fixity.PREFIX">
+<span class="sig-name descname"><span class="pre">PREFIX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pycaliper.per.expr.Op.Fixity.PREFIX" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.OpApply">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">OpApply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">op</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.expr.OpApply" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><code class="xref py py-class docutils literal notranslate"><span class="pre">Expr</span></code></a></p>
+<p>Apply an operator to a list of arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>op</strong> (<a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><em>Op</em></a>) – Operator</p></li>
+<li><p><strong>args</strong> (<em>list</em>) – List of arguments.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.expr.OpApply.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.expr.OpApply.get_sva" title="Link to this definition"></a></dt>
+<dd><p>Get the SVA representation of the operator application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pref</strong> (<em>str</em><em>, </em><em>optional</em>) – Prefix that signals are nested under. Defaults to ‘a’.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the fixity of the operator is unknown.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>SVA representation of the operator application.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Power">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Power</span></span><a class="headerlink" href="#pycaliper.per.expr.Power" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the power operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.Sub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">Sub</span></span><a class="headerlink" href="#pycaliper.per.expr.Sub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the subtraction operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.UnaryBitwiseAnd">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">UnaryBitwiseAnd</span></span><a class="headerlink" href="#pycaliper.per.expr.UnaryBitwiseAnd" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the unary bitwise AND operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.UnaryBitwiseNand">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">UnaryBitwiseNand</span></span><a class="headerlink" href="#pycaliper.per.expr.UnaryBitwiseNand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the unary bitwise NAND operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.UnaryBitwiseNor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">UnaryBitwiseNor</span></span><a class="headerlink" href="#pycaliper.per.expr.UnaryBitwiseNor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the unary bitwise NOR operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.UnaryBitwiseNot">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">UnaryBitwiseNot</span></span><a class="headerlink" href="#pycaliper.per.expr.UnaryBitwiseNot" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the unary bitwise NOT operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.UnaryBitwiseOr">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">UnaryBitwiseOr</span></span><a class="headerlink" href="#pycaliper.per.expr.UnaryBitwiseOr" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the unary bitwise OR operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.UnaryBitwiseXnor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">UnaryBitwiseXnor</span></span><a class="headerlink" href="#pycaliper.per.expr.UnaryBitwiseXnor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the unary bitwise XNOR operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.UnaryBitwiseXor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">UnaryBitwiseXor</span></span><a class="headerlink" href="#pycaliper.per.expr.UnaryBitwiseXor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the unary bitwise XOR operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.UnaryLogicalNot">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">UnaryLogicalNot</span></span><a class="headerlink" href="#pycaliper.per.expr.UnaryLogicalNot" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the unary logical NOT operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.UnaryMinus">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">UnaryMinus</span></span><a class="headerlink" href="#pycaliper.per.expr.UnaryMinus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the unary minus operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.UnaryPlus">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">UnaryPlus</span></span><a class="headerlink" href="#pycaliper.per.expr.UnaryPlus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the unary plus operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.WildcardEquality">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">WildcardEquality</span></span><a class="headerlink" href="#pycaliper.per.expr.WildcardEquality" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the wildcard equality operation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.expr.WildcardInequality">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.expr.</span></span><span class="sig-name descname"><span class="pre">WildcardInequality</span></span><a class="headerlink" href="#pycaliper.per.expr.WildcardInequality" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Op" title="pycaliper.per.expr.Op"><code class="xref py py-class docutils literal notranslate"><span class="pre">Op</span></code></a></p>
+<p>Represents the wildcard inequality operation.</p>
+</dd></dl>
+
+</section>
+<section id="module-pycaliper.per.per">
+<span id="pycaliper-per-per-module"></span><h2>pycaliper.per.per module<a class="headerlink" href="#module-pycaliper.per.per" title="Link to this heading"></a></h2>
+<p>PyCaliper</p>
+<p>Author: Adwait Godbole, UC Berkeley</p>
+<p>File: per/per.py</p>
+<dl class="simple">
+<dt>Internal representation classes for PyCaliper:</dt><dd><dl class="simple">
+<dt>PER (Partial Equivalence Relations):</dt><dd><dl class="simple">
+<dt>A partial equivalence relation defined through equality and</dt><dd><p>conditional equality assertions.</p>
+</dd>
+</dl>
+</dd>
+<dt>Logic:</dt><dd><p>Single bitvectors</p>
+</dd>
+<dt>Struct:</dt><dd><p>Support for SystemVerilog structs</p>
+</dd>
+<dt>SpecModule:</dt><dd><p>A module in the specification hierarchy, what else can it be?</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>This module provides internal representation classes for PyCaliper, including PER, Logic, Struct, and SpecModule.</p>
+<p>For licensing information, please refer to the LICENSE file.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.AuxModule">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">AuxModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">portmapping</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.AuxModule" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.SpecModule" title="pycaliper.per.per.SpecModule"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpecModule</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.AuxModule.get_instance_str">
+<span class="sig-name descname"><span class="pre">get_instance_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bindinstance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.AuxModule.get_instance_str" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.AuxModule.instantiate">
+<span class="sig-name descname"><span class="pre">instantiate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Path(path=[],</span> <span class="pre">slicelow=-1,</span> <span class="pre">slicehigh=-1)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.AuxModule.instantiate" title="Link to this definition"></a></dt>
+<dd><p>Instantiate the current SpecModule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>path</strong> (<a class="reference internal" href="#pycaliper.per.per.Path" title="pycaliper.per.per.Path"><em>Path</em></a><em>, </em><em>optional</em>) – The path in the hierarchy to place this module at. Defaults to Path([]).</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return the instantiated module.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#pycaliper.per.per.SpecModule" title="pycaliper.per.per.SpecModule">SpecModule</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.AuxModule.is_leftcopy">
+<span class="sig-name descname"><span class="pre">is_leftcopy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.AuxModule.is_leftcopy" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.AuxPort">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">AuxPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.AuxPort" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Logic</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.AuxReg">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">AuxReg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.AuxReg" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Logic</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.Clock">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">Clock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Clock" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Logic</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.CondEq">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">CondEq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cond</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.CondEq" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.PER" title="pycaliper.per.per.PER"><code class="xref py py-class docutils literal notranslate"><span class="pre">PER</span></code></a></p>
+<p>Conditional equality assertion</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.CondEq.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cpy1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpy2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'b'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.CondEq.get_sva" title="Link to this definition"></a></dt>
+<dd><p>Get the SVA representation of the conditional equality assertion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.CondEqHole">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">CondEqHole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cond</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.CondEqHole" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.Hole" title="pycaliper.per.per.Hole"><code class="xref py py-class docutils literal notranslate"><span class="pre">Hole</span></code></a></p>
+<p>A synthesis hole for a conditional equality PER</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.Context">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">Context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Context" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Context of specification declarations made within a module.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.per.Context.INPUT">
+<span class="sig-name descname"><span class="pre">INPUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pycaliper.per.per.Context.INPUT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.per.Context.OUTPUT">
+<span class="sig-name descname"><span class="pre">OUTPUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#pycaliper.per.per.Context.OUTPUT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.per.Context.STATE">
+<span class="sig-name descname"><span class="pre">STATE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pycaliper.per.per.Context.STATE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.per.Context.UNROLL">
+<span class="sig-name descname"><span class="pre">UNROLL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pycaliper.per.per.Context.UNROLL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.CtrAlignHole">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">CtrAlignHole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.CtrAlignHole" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.Hole" title="pycaliper.per.per.Hole"><code class="xref py py-class docutils literal notranslate"><span class="pre">Hole</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.Eq">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">Eq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Eq" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.PER" title="pycaliper.per.per.PER"><code class="xref py py-class docutils literal notranslate"><span class="pre">PER</span></code></a></p>
+<p>Relational equality assertion.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Eq.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cpy1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpy2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'b'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Eq.get_sva" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>cpy1</strong> (<em>str</em><em>, </em><em>optional</em>) – Hierarchy prefix of left copy. Defaults to ‘a’.</p></li>
+<li><p><strong>cpy2</strong> (<em>str</em><em>, </em><em>optional</em>) – Hierarchy prefix of right copy. Defaults to ‘b’.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>SVA representation of the equality assertion.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.FSMHole">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">FSMHole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guardsigs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statesig</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.FSMHole" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.Hole" title="pycaliper.per.per.Hole"><code class="xref py py-class docutils literal notranslate"><span class="pre">Hole</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.Group">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">Group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Group" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A hierarchical group; does not have any hierarchical position associated with itself.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Group.get_repr">
+<span class="sig-name descname"><span class="pre">get_repr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reprs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Group.get_repr" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Group.instantiate">
+<span class="sig-name descname"><span class="pre">instantiate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Group.instantiate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.Hole">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">Hole</span></span><a class="headerlink" href="#pycaliper.per.per.Hole" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A synthesis hole</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Hole.deactivate">
+<span class="sig-name descname"><span class="pre">deactivate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Hole.deactivate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.Inv">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">Inv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Inv" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.Prop" title="pycaliper.per.per.Prop"><code class="xref py py-class docutils literal notranslate"><span class="pre">Prop</span></code></a></p>
+<p>Invariant class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Inv.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Inv.get_sva" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.Logic">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">Logic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Logic" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><code class="xref py py-class docutils literal notranslate"><span class="pre">Expr</span></code></a>, <a class="reference internal" href="#pycaliper.per.per.TypedElem" title="pycaliper.per.per.TypedElem"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypedElem</span></code></a></p>
+<p>Class for single bitvectors/signals</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Logic.get_hier_path">
+<span class="sig-name descname"><span class="pre">get_hier_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Logic.get_hier_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Logic.get_hier_path_flatindex">
+<span class="sig-name descname"><span class="pre">get_hier_path_flatindex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Logic.get_hier_path_flatindex" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Logic.get_hier_path_nonindex">
+<span class="sig-name descname"><span class="pre">get_hier_path_nonindex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Logic.get_hier_path_nonindex" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Logic.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Logic.get_sva" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pref</strong> (<em>str</em><em>, </em><em>optional</em>) – Top-level module prefix string. Defaults to ‘a’.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>SVA representation of the signal.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Logic.instantiate">
+<span class="sig-name descname"><span class="pre">instantiate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Logic.instantiate" title="Link to this definition"></a></dt>
+<dd><p>Instantiate the logic signal with a path and parent array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Logic</span></code></a></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference internal" href="#pycaliper.per.per.Path" title="pycaliper.per.per.Path"><em>Path</em></a>) – Path object representing the hierarchical path</p></li>
+<li><p><strong>parent</strong> (<a class="reference internal" href="#pycaliper.per.per.LogicArray" title="pycaliper.per.per.LogicArray"><em>LogicArray</em></a><em>, </em><em>optional</em>) – Parent array. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return self</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic">Logic</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Logic.is_arr_elem">
+<span class="sig-name descname"><span class="pre">is_arr_elem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Logic.is_arr_elem" title="Link to this definition"></a></dt>
+<dd><p>Check if this signal is an element of an array (inspects the path to see if last level is indexed).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the signal is an array element.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.LogicArray">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">LogicArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typ_const</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.LogicArray" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.TypedElem" title="pycaliper.per.per.TypedElem"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypedElem</span></code></a></p>
+<p>An array of logic signals</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.LogicArray.get_hier_path">
+<span class="sig-name descname"><span class="pre">get_hier_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.LogicArray.get_hier_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.LogicArray.instantiate">
+<span class="sig-name descname"><span class="pre">instantiate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.LogicArray.instantiate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.PER">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">PER</span></span><a class="headerlink" href="#pycaliper.per.per.PER" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.Prop" title="pycaliper.per.per.Prop"><code class="xref py py-class docutils literal notranslate"><span class="pre">Prop</span></code></a></p>
+<p>Partial Equivalence Relation (PER) base class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.PER.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cpy1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpy2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.PER.get_sva" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.PERHole">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">PERHole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">per</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.PERHole" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.Hole" title="pycaliper.per.per.Hole"><code class="xref py py-class docutils literal notranslate"><span class="pre">Hole</span></code></a></p>
+<p>A synthesis hole for a PER</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.Path">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">Path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slicelow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slicehigh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Path" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Path: representing a hierarchical path in the specification.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.per.Path.path">
+<span class="sig-name descname"><span class="pre">path</span></span><a class="headerlink" href="#pycaliper.per.per.Path.path" title="Link to this definition"></a></dt>
+<dd><p>At each hierarchical level, string represents identifier and
+the list represents the indexing (if unindexed, then the index is an empty list []).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[tuple[str, list]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.per.Path.slicehigh">
+<span class="sig-name descname"><span class="pre">slicehigh</span></span><a class="headerlink" href="#pycaliper.per.per.Path.slicehigh" title="Link to this definition"></a></dt>
+<dd><p>High index of the slice (default 0).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pycaliper.per.per.Path.slicelow">
+<span class="sig-name descname"><span class="pre">slicelow</span></span><a class="headerlink" href="#pycaliper.per.per.Path.slicelow" title="Link to this definition"></a></dt>
+<dd><p>Low index of the slice (default 0).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Path.add_level">
+<span class="sig-name descname"><span class="pre">add_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Path.add_level" title="Link to this definition"></a></dt>
+<dd><p>Add a new level to the path. For example, a.b[0] -&gt; a.b[0].c</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pycaliper.per.per.Path" title="pycaliper.per.per.Path"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>name</strong> (<em>str</em>) – name of the new level</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>new path with the level added.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#pycaliper.per.per.Path" title="pycaliper.per.per.Path">Path</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Path.add_level_index">
+<span class="sig-name descname"><span class="pre">add_level_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Path.add_level_index" title="Link to this definition"></a></dt>
+<dd><p>Add an index to the last level of the path. For example, a.b[0].c -&gt; a.b[0].c[1]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pycaliper.per.per.Path" title="pycaliper.per.per.Path"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>i</strong> (<em>int</em>) – index to be added</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>new path with the index added.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#pycaliper.per.per.Path" title="pycaliper.per.per.Path">Path</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Path.get_hier_path">
+<span class="sig-name descname"><span class="pre">get_hier_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Path.get_hier_path" title="Link to this definition"></a></dt>
+<dd><p>Get the hierarchical path as a string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>sep</strong> (<em>str</em><em>, </em><em>optional</em>) – Separator in generated path string. Defaults to ‘.’.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Path string.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Path.get_hier_path_flatindex">
+<span class="sig-name descname"><span class="pre">get_hier_path_flatindex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Path.get_hier_path_flatindex" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Get the hierarchical path string with all indices flattened. Uses ‘_’ as separator.</dt><dd><p>For example: a.b[0].c[1] -&gt; a_b_0_c_1</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Path string.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Path.get_hier_path_nonindex">
+<span class="sig-name descname"><span class="pre">get_hier_path_nonindex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Path.get_hier_path_nonindex" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Get the hierarchical path string without last level index. Uses ‘_’ as separator.</dt><dd><p>For example: a.b[0].c[1] -&gt; a_b_0_c</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Path string.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">,</span> <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code><span class="pre">]]</span></em><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">slicehigh</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-1</span></em><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">slicelow</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-1</span></em><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.Prop">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">Prop</span></span><a class="headerlink" href="#pycaliper.per.per.Prop" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Property class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Prop.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Prop.get_sva" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.SVFunc">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">SVFunc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SVFunc" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.SVFuncApply">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">SVFuncApply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SVFuncApply" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><code class="xref py py-class docutils literal notranslate"><span class="pre">Expr</span></code></a></p>
+<p>Apply a SystemVerilog function to a list of arguments</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SVFuncApply.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SVFuncApply.get_sva" title="Link to this definition"></a></dt>
+<dd><p>Get the SVA representation of the function application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.SimulationSchedule">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">SimulationSchedule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SimulationSchedule" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SimulationSchedule.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SimulationSchedule.step" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pycaliper.per.per.SimulationSchedule.steps">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">steps</span></span><a class="headerlink" href="#pycaliper.per.per.SimulationSchedule.steps" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.SimulationStep">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">SimulationStep</span></span><a class="headerlink" href="#pycaliper.per.per.SimulationStep" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">SpecModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>SpecModule class for specifications related to a SV HW module</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.condeqhole">
+<span class="sig-name descname"><span class="pre">condeqhole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cond</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exprs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.condeqhole" title="Link to this definition"></a></dt>
+<dd><p>Creates a Conditional Eq (synthesis) hole.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cond</strong> (<a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><em>Expr</em></a>) – the condition for the Eq.</p></li>
+<li><p><strong>exprs</strong> (<em>list</em><em>[</em><a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><em>Expr</em></a><em>]</em>) – the list of expressions to consider as candidates for filling this hole.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.ctralignhole">
+<span class="sig-name descname"><span class="pre">ctralignhole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.ctralignhole" title="Link to this definition"></a></dt>
+<dd><p>Creates a Control Alignment hole.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ctr</strong> (<a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic"><em>Logic</em></a>) – the control signal that the branch conditions are based on.</p></li>
+<li><p><strong>sigs</strong> (<em>list</em><em>[</em><a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic"><em>Logic</em></a><em>]</em>) – the signals to learn lookup tables for.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.eq">
+<span class="sig-name descname"><span class="pre">eq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">elems</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.eq" title="Link to this definition"></a></dt>
+<dd><p>Create an relational equality invariant</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.eqhole">
+<span class="sig-name descname"><span class="pre">eqhole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exprs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.eqhole" title="Link to this definition"></a></dt>
+<dd><p>Creates an Eq (synthesis) hole.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>exprs</strong> (<em>list</em><em>[</em><a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><em>Expr</em></a><em>]</em>) – the list of expressions to consider as candidates for filling this hole.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.fsmhole">
+<span class="sig-name descname"><span class="pre">fsmhole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guardsigs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statesig</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.fsmhole" title="Link to this definition"></a></dt>
+<dd><p>Creates an FSM hole.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>guardsigs</strong> (<em>list</em><em>[</em><a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic"><em>Logic</em></a><em>]</em>) – the guard signals for the FSM.</p></li>
+<li><p><strong>statesig</strong> (<a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic"><em>Logic</em></a>) – the state signal for the FSM.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.full_repr">
+<span class="sig-name descname"><span class="pre">full_repr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.full_repr" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.get_clk">
+<span class="sig-name descname"><span class="pre">get_clk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.get_clk" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pycaliper.per.per.Clock" title="pycaliper.per.per.Clock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clock</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.get_hier_path">
+<span class="sig-name descname"><span class="pre">get_hier_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.get_hier_path" title="Link to this definition"></a></dt>
+<dd><p>Call inner get_hier_path method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.get_repr">
+<span class="sig-name descname"><span class="pre">get_repr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reprs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.get_repr" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.get_unroll_kind_depths">
+<span class="sig-name descname"><span class="pre">get_unroll_kind_depths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.get_unroll_kind_depths" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.incr">
+<span class="sig-name descname"><span class="pre">incr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.incr" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.input">
+<span class="sig-name descname"><span class="pre">input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.input" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.instantiate">
+<span class="sig-name descname"><span class="pre">instantiate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Path(path=[],</span> <span class="pre">slicelow=-1,</span> <span class="pre">slicehigh=-1)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.instantiate" title="Link to this definition"></a></dt>
+<dd><p>Instantiate the current SpecModule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pycaliper.per.per.SpecModule" title="pycaliper.per.per.SpecModule"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpecModule</span></code></a></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>path</strong> (<a class="reference internal" href="#pycaliper.per.per.Path" title="pycaliper.per.per.Path"><em>Path</em></a><em>, </em><em>optional</em>) – The path in the hierarchy to place this module at. Defaults to Path([]).</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return the instantiated module.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#pycaliper.per.per.SpecModule" title="pycaliper.per.per.SpecModule">SpecModule</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.inv">
+<span class="sig-name descname"><span class="pre">inv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.inv" title="Link to this definition"></a></dt>
+<dd><p>Add single trace invariants to the current context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>expr</strong> (<a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><em>Expr</em></a>) – the invariant expression.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.is_instantiated">
+<span class="sig-name descname"><span class="pre">is_instantiated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.is_instantiated" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.output">
+<span class="sig-name descname"><span class="pre">output</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.output" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.pprint">
+<span class="sig-name descname"><span class="pre">pprint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.pprint" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.prev">
+<span class="sig-name descname"><span class="pre">prev</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.prev" title="Link to this definition"></a></dt>
+<dd><p>Get the previous value of a signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Logic</span></code></a></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>elem</strong> (<a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic"><em>Logic</em></a>) – the signal to get the previous value of.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the previous value of the signal.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#pycaliper.per.per.Logic" title="pycaliper.per.per.Logic">Logic</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.pycassert">
+<span class="sig-name descname"><span class="pre">pycassert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.pycassert" title="Link to this definition"></a></dt>
+<dd><p>Add an assertion to the current context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>expr</strong> (<a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><em>Expr</em></a>) – the assertion expression.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.pycassume">
+<span class="sig-name descname"><span class="pre">pycassume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.pycassume" title="Link to this definition"></a></dt>
+<dd><p>Add an assumption to the current context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>expr</strong> (<a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><em>Expr</em></a>) – the assumption expression.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.sprint">
+<span class="sig-name descname"><span class="pre">sprint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.sprint" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.stable">
+<span class="sig-name descname"><span class="pre">stable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.stable" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.state">
+<span class="sig-name descname"><span class="pre">state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.state" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.SpecModule.when">
+<span class="sig-name descname"><span class="pre">when</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cond</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.SpecModule.when" title="Link to this definition"></a></dt>
+<dd><p>Conditional equality PER.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>cond</strong> (<a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><em>Expr</em></a>) – the condition Expr to enforce nested PER under.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a lambda that is applied to the nested PER.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.Struct">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">Struct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Struct" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pycaliper.per.per.TypedElem" title="pycaliper.per.per.TypedElem"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypedElem</span></code></a></p>
+<p>Struct as seen in SV</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Struct.eq">
+<span class="sig-name descname"><span class="pre">eq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Struct.eq" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Struct.get_repr">
+<span class="sig-name descname"><span class="pre">get_repr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reprs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Struct.get_repr" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Struct.get_sva">
+<span class="sig-name descname"><span class="pre">get_sva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Struct.get_sva" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Struct.instantiate">
+<span class="sig-name descname"><span class="pre">instantiate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Struct.instantiate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Struct.pprint">
+<span class="sig-name descname"><span class="pre">pprint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Struct.pprint" title="Link to this definition"></a></dt>
+<dd><p>Pretty print the struct definition</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Struct.sprint">
+<span class="sig-name descname"><span class="pre">sprint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Struct.sprint" title="Link to this definition"></a></dt>
+<dd><p>Pretty string for the struct definition</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Struct.state">
+<span class="sig-name descname"><span class="pre">state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Struct.state" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.Struct.when">
+<span class="sig-name descname"><span class="pre">when</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cond</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.Struct.when" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pycaliper.per.per.TypedElem">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">TypedElem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.TypedElem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An element in the design hierarchy (Logic, LogicArray, Struct, …) with a type.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pycaliper.per.per.TypedElem.instantiate">
+<span class="sig-name descname"><span class="pre">instantiate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.TypedElem.instantiate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.per.per.get_path_from_hierarchical_str">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">get_path_from_hierarchical_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathstr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.get_path_from_hierarchical_str" title="Link to this definition"></a></dt>
+<dd><p>Get a path with a single level
+Args: name (str): name of the singleton path
+Returns: Path object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pycaliper.per.per.Path" title="pycaliper.per.per.Path"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.per.per.kinduct">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">kinduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.kinduct" title="Link to this definition"></a></dt>
+<dd><p>Decorator to set the k-induction depth for a state invariant specification.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.per.per.nonreserved_or_fresh">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">nonreserved_or_fresh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.nonreserved_or_fresh" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.per.per.unroll">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">unroll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.unroll" title="Link to this definition"></a></dt>
+<dd><p>Decorator to set the unroll depth for a function in a SpecModule.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pycaliper.per.per.when">
+<span class="sig-prename descclassname"><span class="pre">pycaliper.per.per.</span></span><span class="sig-name descname"><span class="pre">when</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cond</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pycaliper.per.per.when" title="Link to this definition"></a></dt>
+<dd><p>Create a Conditional equality PER generator. This returns a lambda that returns a CondEq object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cond</strong> (<a class="reference internal" href="#pycaliper.per.expr.Expr" title="pycaliper.per.expr.Expr"><em>Expr</em></a>) – the condition to apply the PER under</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pycaliper.per">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pycaliper.per" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pycaliper.jginterface.html" class="btn btn-neutral float-left" title="pycaliper.jginterface package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pycaliper.synth.html" class="btn btn-neutral float-right" title="pycaliper.synth package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-25, Intel Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
